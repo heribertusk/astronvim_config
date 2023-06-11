@@ -6,5 +6,6 @@ return {
 
   { import = "astrocommunity.colorscheme.catppuccin" },
   { import = "astrocommunity.color.tint-nvim" },
+  { import = "astrocommunity.media.vim-wakatime"},
   -- { import = "astrocommunity.completion.copilot-lua-cmp" },
 }
