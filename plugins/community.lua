@@ -11,4 +11,6 @@ return {
   -- { import = "astrocommunity.pack.typescript" },
   -- { import = "astrocommunity.completion.copilot-lua-cmp" },
   { import = "astrocommunity.pack.tailwindcss" },
+  { import = "astrocommunity.editing-support.todo-comments-nvim" },
+  { import = "astrocommunity.git.git-blame-nvim" },
 }
