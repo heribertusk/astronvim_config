@@ -6,7 +6,7 @@ return {
       -- "lua",
       -- "vim",
       -- "php",
-      "vue",
+      -- "vue",
     })
   end,
 }
