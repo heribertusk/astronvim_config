@@ -10,7 +10,7 @@ return {
         -- "lua_ls",
         -- "phpactor",
         "intelephense",
-        "vue-language-server",
+        "volar",
       })
     end,
   },
