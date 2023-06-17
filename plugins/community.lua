@@ -7,8 +7,6 @@ return {
   { import = "astrocommunity.color.tint-nvim" },
   { import = "astrocommunity.media.vim-wakatime" },
   { import = "astrocommunity.pack.lua" },
-  -- { import = "astrocommunity.pack.vue" },
-  -- { import = "astrocommunity.pack.typescript" },
   -- { import = "astrocommunity.completion.copilot-lua-cmp" },
   { import = "astrocommunity.pack.tailwindcss" },
   { import = "astrocommunity.editing-support.todo-comments-nvim" },
