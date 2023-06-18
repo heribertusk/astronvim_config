@@ -5,20 +5,33 @@ return {
     opts = function(_, opts)
       -- customize the dashboard header
       opts.section.header.val = {
-        " █████  ███████ ████████ ██████   ██████",
-        "██   ██ ██         ██    ██   ██ ██    ██",
-        "███████ ███████    ██    ██████  ██    ██",
-        "██   ██      ██    ██    ██   ██ ██    ██",
-        "██   ██ ███████    ██    ██   ██  ██████",
-        " ",
-        "    ███    ██ ██    ██ ██ ███    ███",
-        "    ████   ██ ██    ██ ██ ████  ████",
-        "    ██ ██  ██ ██    ██ ██ ██ ████ ██",
-        "    ██  ██ ██  ██  ██  ██ ██  ██  ██",
-        "    ██   ████   ████   ██ ██      ██",
+        " █████╗ ████████╗██████╗ ██╗   ██╗ ██████╗ ███████╗",
+        "██╔══██╗╚══██╔══╝██╔══██╗██║   ██║██╔═══██╗██╔════╝",
+        "███████║   ██║   ██║  ██║██║   ██║██║   ██║███████╗",
+        "██╔══██║   ██║   ██║  ██║██║   ██║██║   ██║╚════██║",
+        "██║  ██║   ██║   ██████╔╝╚██████╔╝╚██████╔╝███████║",
+        "╚═╝  ╚═╝   ╚═╝   ╚═════╝  ╚═════╝  ╚═════╝ ╚══════╝",
       }
       return opts
     end,
+  },
+  { "nvim-notify", enabled = false },
+  {
+    "neovim/nvim-lspconfig",
+    opts = {
+      servers = { eslint = {} },
+      setup = {
+        eslint = function()
+          require("lazyvim.util").on_attach(function(client)
+            if client.name == "eslint" then
+              client.server_capabilities.documentFormattingProvider = true
+            elseif client.name == "tsserver" then
+              client.server_capabilities.documentFormattingProvider = false
+            end
+          end)
+        end,
+      },
+    },
   },
   -- You can disable default plugins as follows:
   -- { "max397574/better-escape.nvim", enabled = false },
