@@ -39,6 +39,7 @@ return {
           "js",
           "php",
           "lua",
+          "ts",
         },
         ignore_filetypes = { -- disable format on save for specified filetypes
           -- "python",
