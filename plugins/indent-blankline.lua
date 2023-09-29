@@ -1,7 +1,8 @@
 return {
   {
     "lukas-reineke/indent-blankline.nvim",
-    version = "2.20.7",
+    version = "3.2",
+    main = "ibl",
     opts = {
       buftype_exclude = {
         "nofile",
